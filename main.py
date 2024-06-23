@@ -7,9 +7,9 @@ import shutil
 
 #wget command for HTML data
 
-allJobsPath = '/Users/dehaortasari/Documents/projectLaMancha/allJobs'
-outputTextPath = '/Users/dehaortasari/Documents/projectLaMancha/output.txt'
-filteredJobsPath = '/Users/dehaortasari/Documents/projectLaMancha/filteredJobs'
+allJobsPath = '/Users/dehaortasari/Documents/projectLaMancha/LaMancha/allJobs'
+outputTextPath = '/Users/dehaortasari/Documents/projectLaMancha/LaMancha/output.txt'
+filteredJobsPath = '/Users/dehaortasari/Documents/projectLaMancha/LaMancha/filteredJobs'
 
 
 bash_commandList = ['wget','--directory-prefix', allJobsPath,'-E', '-i', outputTextPath]
@@ -53,7 +53,7 @@ for page in pages:
             data.append(item)
 
 
-with open("output.txt", "w", encoding ="utf-8") as f:
+with open(outputTextPath, "w", encoding ="utf-8") as f:
     for re_codes in data:
         f.write(f"{re_codes}\n")
 
